@@ -1,7 +1,8 @@
 <?php
+
 /**
  *
- * @link       {REPLACE_ME_URL}
+ * @link       https://websweetstudio.com/
  * @since      1.0.0
  *
  * @package    Custom_Plugin
@@ -22,11 +23,12 @@ class Custom_Plugin_Post_Types
     public function register_post_types()
     {
         // Register Blog Post Type
-            register_post_type( 'attendance',
+        register_post_type(
+            'attendance',
             array(
                 'labels' => array(
-                    'name' => ( 'Attendance' ),
-                    'singular_name' => ( 'Attendance' )
+                    'name' => ('Attendance'),
+                    'singular_name' => ('Attendance')
                 ),
                 'public' => true,
                 'has_archive' => true,

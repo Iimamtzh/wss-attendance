@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       {REPLACE_ME_URL}
+ * @link       https://websweetstudio.com/
  * @since      1.0.0
  *
  * @package    Custom_Plugin
@@ -22,9 +22,10 @@
  * @since      1.0.0
  * @package    Custom_Plugin
  * @subpackage Custom_Plugin/includes
- * @author     {REPLACE_ME_AUTHOR}
+ * @author     Wss Dev
  */
-class Custom_Plugin_i18n {
+class Custom_Plugin_i18n
+{
 
 
 	/**
@@ -32,16 +33,13 @@ class Custom_Plugin_i18n {
 	 *
 	 * @since    1.0.0
 	 */
-	public function load_plugin_textdomain() {
+	public function load_plugin_textdomain()
+	{
 
 		load_plugin_textdomain(
 			'custom-plugin',
 			false,
-			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+			dirname(dirname(plugin_basename(__FILE__))) . '/languages/'
 		);
-
 	}
-
-
-
 }

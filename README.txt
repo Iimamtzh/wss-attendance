@@ -1,4 +1,4 @@
-# Custom Plugin
+# Wss Attendance
 
 Plugin starter untuk menambah fitur untuk web klien. Berisi beberapa contoh fitur untuk mempercepat prosses pengerjaan.
 

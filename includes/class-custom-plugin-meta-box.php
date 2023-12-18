@@ -3,12 +3,14 @@
 /**
  * Class Custom_Plugin_Meta_Box
  */
-class Custom_Plugin_Meta_Box {
-    
+class Custom_Plugin_Meta_Box
+{
+
     /**
      * Custom_Plugin_Meta_Box constructor.
      */
-    public function __construct() {
+    public function __construct()
+    {
         add_filter('rwmb_meta_boxes', array($this, 'register_meta_boxes'));
         add_action('admin_notices', array($this, 'metabox_admin_notice'));
     }
@@ -20,53 +22,54 @@ class Custom_Plugin_Meta_Box {
      *
      * @return array
      */
-    public function register_meta_boxes($meta_boxes) {
+    public function register_meta_boxes($meta_boxes)
+    {
         $prefix = '';
 
         $meta_boxes[] = [
-            'title'      => esc_html__( 'Detail Attendance', 'online-generator' ),
+            'title'      => esc_html__('Detail Attendance', 'online-generator'),
             'id'         => 'detail_attendance',
             'post_types' => 'attendance',
             'context'    => 'normal',
             'fields'     => [
                 [
                     'type' => 'date',
-                    'name' => esc_html__( 'Tanggal (Date)', 'online-generator' ),
+                    'name' => esc_html__('Tanggal (Date)', 'online-generator'),
                     'id'   => $prefix . 'tanggal',
                 ],
                 [
                     'type' => 'time',
-                    'name' => esc_html__( 'Jam Masuk (Check-in Time)', 'online-generator' ),
+                    'name' => esc_html__('Jam Masuk (Check-in Time)', 'online-generator'),
                     'id'   => $prefix . 'jam_masuk',
                 ],
                 [
                     'type' => 'time',
-                    'name' => esc_html__( 'Jam Pulang (Check-out Time)', 'online-generator' ),
+                    'name' => esc_html__('Jam Pulang (Check-out Time)', 'online-generator'),
                     'id'   => $prefix . 'jam_pulang',
                 ],
                 [
                     'type' => 'text',
-                    'name' => esc_html__( 'Lokasi (Location)', 'online-generator' ),
+                    'name' => esc_html__('Lokasi (Location)', 'online-generator'),
                     'id'   => $prefix . 'lokasi',
                 ],
                 [
                     'type'    => 'select',
-                    'name'    => esc_html__( 'Status Kehadiran (Attendance Status)', 'online-generator' ),
+                    'name'    => esc_html__('Status Kehadiran (Attendance Status)', 'online-generator'),
                     'id'      => $prefix . 'status_kehadiran',
                     'options' => [
-                        'Hadir'       => esc_html__( 'Hadir', 'online-generator' ),
-                        'Izin'        => esc_html__( 'Izin', 'online-generator' ),
-                        'Tidak hadir' => esc_html__( 'Tidak hadir', 'online-generator' ),
+                        'Hadir'       => esc_html__('Hadir', 'online-generator'),
+                        'Izin'        => esc_html__('Izin', 'online-generator'),
+                        'Tidak hadir' => esc_html__('Tidak hadir', 'online-generator'),
                     ],
                 ],
                 [
                     'type' => 'textarea',
-                    'name' => esc_html__( 'Keterangan (Remarks)', 'online-generator' ),
+                    'name' => esc_html__('Keterangan (Remarks)', 'online-generator'),
                     'id'   => $prefix . 'keterangan',
                 ],
                 [
                     'type' => 'text',
-                    'name' => esc_html__( 'ID Karyawan (User ID)', 'online-generator' ),
+                    'name' => esc_html__('ID Karyawan (User ID)', 'online-generator'),
                     'id'   => $prefix . 'id_karyawan',
                 ],
             ],
@@ -75,12 +78,13 @@ class Custom_Plugin_Meta_Box {
         return $meta_boxes;
     }
 
-    public function metabox_admin_notice(){
+    public function metabox_admin_notice()
+    {
         // global $pagenow;
         // if ( $pagenow == 'options-general.php' ) {
-        if ( ! is_plugin_active( 'meta-box/meta-box.php' ) ) {
-             echo "<div class='notice notice-warning is-dismissible'>
-                 <p>Custom Plugin: Install & Aktifkan plugin 'Meta Box – WordPress Custom Fields Framework.'</p>
+        if (!is_plugin_active('meta-box/meta-box.php')) {
+            echo "<div class='notice notice-warning is-dismissible'>
+                 <p>Wss Attendance: Install & Aktifkan plugin 'Meta Box – WordPress Custom Fields Framework.'</p>
              </div>";
         }
         // }

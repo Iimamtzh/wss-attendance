@@ -3,7 +3,7 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       {REPLACE_ME_URL}
+ * @link       https://websweetstudio.com/
  * @since      1.0.0
  *
  * @package    Custom_Plugin
@@ -18,9 +18,10 @@
  * @since      1.0.0
  * @package    Custom_Plugin
  * @subpackage Custom_Plugin/includes
- * @author     {REPLACE_ME_AUTHOR}
+ * @author     Wss Dev
  */
-class Custom_Plugin_Deactivator {
+class Custom_Plugin_Deactivator
+{
 
 	/**
 	 * Short Description. (use period)
@@ -29,8 +30,7 @@ class Custom_Plugin_Deactivator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function deactivate() {
-
+	public static function deactivate()
+	{
 	}
-
 }
